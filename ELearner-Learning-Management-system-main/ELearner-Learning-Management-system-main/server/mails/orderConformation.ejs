@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELearning Order Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #444;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    h1 {
+      color: #007bff;
+      margin-top: 0;
+    }
+
+    .message {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .course-info {
+      margin-top: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .first-td {
+      width: 60%;
+    }
+
+    .second-td {
+      width: 20%;
+    }
+
+    .total {
+      font-weight: bold;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="message">
+      <h1>Your ELearning Order is Confirmed!</h1>
+      <p>We're just as excited as you are.</p>
+    </div>
+    <div class="course-info">
+      <h2>Here's what you ordered:</h2>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Cost</th>
+        </tr>
+        <tr>
+          <td>
+            <%= order.name %>
+          </td>
+          <td>1</td>
+          <td>$<%= order.price %>
+          </td>
+        </tr>
+      </table>
+      <table class="total">
+        <tr>
+          <td class="first-td">Subtotal:</td>
+          <td class="second-td">$<%= order.price %>
+          </td>
+        </tr>
+        <tr>
+          <td class="first-td">Total:</td>
+          <td class="second-td">$<%= order.price %>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="footer">
+      <p>If you have any questions, please contact our support team at <a
+          href="sudh4800@gmail.com">sudh4800@gmail.com</a></p>
+      <p>&copy; 2023 ELearning. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+
+</html>
